@@ -1,0 +1,133 @@
+/*removing all margins, paddings and etc from all elements*/
+* { 
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/*applying the same font to the whole page*/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+/*HEADER CONFIGURATION*/
+header {
+    display: flex;    
+    width: 90%; /* defines how large the page is going to be shown */
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+}
+/* flex relates to the flexbox and how elements are gonna be shown on the page*/
+.logo-container {
+    flex: 1;
+}
+/*selects the classes of nav-bar and display them horizontally*/
+.logo-container, 
+.nav-links, 
+.cart {
+    display: flex;
+    flex: auto;    
+}
+/*styles the text near the logo*/
+.logo {
+    font-weight: 400;
+    margin: 5px;
+}
+.logo-container img {
+    height: 5vh;
+    align-items: center;
+}
+/*flexbox of the nav*/
+nav {
+    flex: 2;
+}
+/*display the links equally spaced*/
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-link {
+    color: #5f5f79;
+    font-size: 18px;
+    text-decoration: none; /*removes hiperlink*/
+}
+/*flexbox of the cart*/
+.cart {    
+    flex: 1;
+    justify-content: flex-end; /*puts the cart to the very left end*/
+}
+/*MAIN CONFIGURATION*/
+.presentation {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    min-height: 80vh;
+    align-items: center;
+}
+.introduction {    
+    flex: 1;
+}
+.intro-text h1 {
+    font-size: 60px;
+    font-weight: 500;
+    background: linear-gradient(to right, #494964, #6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.intro-text p {
+    margin-top: 2px;
+    font-size: 20px;
+    color: #585772;
+}
+.cta {
+    padding: 30px 0px 0px 0px;
+}
+.cta-select {
+    border: 3px solid black;
+    background: transparent;
+    color: black;
+    width: 150px;
+    height: 50px;
+    cursor: pointer; 
+    font-size: 15px;   
+}
+.cta-add {    
+    border: 3px;
+    background: black;
+    width: 150px;
+    height: 50px;
+    cursor: pointer; 
+    font-size: 15px;   
+    color: white;
+    margin: 0px 0px 0px 15px;
+}
+.cover {
+    flex: 1;
+    justify-content: flex-end;
+    margin-top: 5%;
+}
+.cover img{
+    height: 70vh;  
+    filter: drop-shadow(0px 5px 3px grey);  
+}
+/*FOOTER CONFIGURATION*/
+.big-circle {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+    opacity: 0.4;
+    height: 90%;
+}
+.medium-circle {
+    position: absolute;
+    top: 20%;
+    right: 30%;
+    z-index: -1;
+    opacity: 0.2;
+    height: 70%;
+}
